@@ -28,7 +28,7 @@ public class HttpRequestParameters {
 	
 	public String getPathFromParams() {
 		if (queryParams == null) {
-			return URL;
+			return "";
 		}
 		
 		StringBuilder sb = new StringBuilder();

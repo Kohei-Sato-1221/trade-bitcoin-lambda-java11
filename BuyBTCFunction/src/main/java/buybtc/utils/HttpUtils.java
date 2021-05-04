@@ -32,9 +32,9 @@ public class HttpUtils {
 			});
 			
 			var bodyParam = HttpRequest.BodyPublishers.ofString(body);
-			var url = params.getURL() + params.getPathFromParams();
 			
-			request = builder.uri(URI.create(url))
+			request = builder
+					.uri(URI.create(params.getURL() + params.getPathFromParams()))
 					.POST(bodyParam)
 					.build();
 		}
